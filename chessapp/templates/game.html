@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Game</title>
+
+    <!-- Bootstrap 5 for Navigation -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'chessapp/chessboard.css' %}">
+
+
+    <!-- Bootstrap 3 for Chessboard -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" 
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" 
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" 
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'chessapp/chessboard.css' %}">
+    <style>
+        /* Dark background */
+        body {
+            background-color: #1c1c1c; /* Dark gray */
+            
+        }
+
+        h3 {
+            color: #ffcc00; /* Bright color for heading */
+        }
+
+        /* Container Styling */
+        .container {
+            background-color: #2b2b2b; /* Slightly lighter dark background */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7); /* Shadow for depth */
+        }
+
+        /* Adjust button colors */
+        .btn-close {
+            filter: invert(1); /* Make close button lighter */
+        }
+
+        /* Chessboard specific section */
+        #chessboard-container {
+            background-color: #3d3d3d; /* Dark chessboard background */
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        /* Styling for alerts */
+        .alert-info {
+            background-color: #ffcc00;
+            color: #333; /* Dark text for alert contrast */
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- Scoped Bootstrap 5 for Navigation -->
+    <div class="bootstrap-5">
+        {% include 'navbar.html' %}
+    </div>
+
+    <div class="container mt-5">
+        <div id="gameOutcomeAlert" class="alert alert-info alert-dismissible fade show" 
+             role="alert" style="display: none;">
+            <span id="gameOutcomeMessage"></span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <!-- Scoped Bootstrap 3 for Chessboard -->
+        <div class="bootstrap-3">
+            <div class="text-center">
+                <h3>Chessboard</h3>
+                <div id="chessboard-container">
+                    <!-- Chessboard will be rendered here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="{% static 'chessapp/active_users.js' %}"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Call the function to render the chessboard or update game state
+            checkForOngoingGame()
+        });
+    </script>
+</body>
+</html>

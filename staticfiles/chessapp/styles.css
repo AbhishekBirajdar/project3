@@ -1,0 +1,49 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #007bff !important;
+}
+
+.nav-link {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.container h2 {
+    margin-top: 50px;
+    color: #343a40;
+}
+
+.container p {
+    font-size: 20px;
+    color: #6c757d;
+}
+
+table {
+    width: 400px;
+    height: 400px;
+    border-collapse: collapse;
+}
+
+td {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 32px;
+}
+
+#gameOutcomeAlert {
+    position: fixed;
+    top: 10px;
+    width: 100%;
+    z-index: 1050; /* Ensure it appears above other elements */
+    text-align: center;
+}

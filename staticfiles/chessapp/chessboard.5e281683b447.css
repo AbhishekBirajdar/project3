@@ -1,0 +1,81 @@
+body {
+  padding: 40px;
+  background-color: #f8f9fa;
+}
+
+#chessboard-container table {
+  border-collapse: collapse;
+}
+
+#chessboard-container td {
+  width: 86.7px !important;
+  height: 75px !important;
+  font-size: 60px !important;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+table {
+  margin: auto;
+  border: 1px solid black;
+  border-collapse: collapse; 
+}
+
+td {
+  background: chocolate; 
+  border: 1px solid black;
+  font-size: 60px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+td, th {
+  padding: 0 !important;
+}
+
+/* Inverted chess pattern */
+tr:nth-child(odd) > td:nth-child(even),
+tr:nth-child(even) > td:nth-child(odd) {
+  background: tan;
+}
+
+th {
+  text-align: center;
+  background: chocolate; 
+  font-weight: bold;
+  padding: 5px;
+}
+
+.container .row {
+  margin-top: 20px;
+}
+
+#about-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#about-section img {
+  border-radius: 50%;
+}
+
+.center-image {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+footer {
+  background-color: #343a40;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
